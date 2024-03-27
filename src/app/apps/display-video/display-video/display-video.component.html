@@ -1,0 +1,33 @@
+<body class="all">
+  <div class="header">
+    <p class="text">{{cat_name}}</p>
+    <button class="homeDiv" routerLink="/home/home">
+      <p class="homeText">Go back</p>
+      <span class="material-icons home">home</span>
+    </button>
+  </div>
+  <div class="content" *ngIf="allowEmbed">
+    <p class="word">{{word}}</p>
+    <div class="videoContainer">
+      <button class="moveL" (click)="previousVideo()" [disabled]="isFirstVideo()">
+        <span class="material-icons moveL"> keyboard_arrow_left </span>
+      </button>
+      <div class="video" *ngIf="allowEmbed">
+        <iframe [src]="url" width="500" height="200" frameborder="0"></iframe>
+      </div>
+      <button class="moveR" (click)="nextVideo()" [disabled]="isLastVideo()">
+        <span class="material-icons moveR"> keyboard_arrow_right </span>
+      </button>
+    </div>
+    <div class="checkbox"><input style="height:20px; width:20px; margin-right:5px; color: rgba(30,39,97);" type="checkbox" (click)="changeRevision()" [(ngModel)]="needRevision" />Revise later</div>
+    <div class="note">
+      <div class="noteContent">
+        <div class="noteInput">
+          <input type="text" placeholder="title" class="titleInput" [(ngModel)]="titleInput" />
+          <input type="text" placeholder="content" class="contentInput" [(ngModel)]="contentInput" />
+        </div>
+      </div>
+      <button class="addBtn" (click)="addNote()"><p class="addText">Add Note</p><span class="material-icons add">add_circle</span></button>
+    </div>
+  </div>
+</body>

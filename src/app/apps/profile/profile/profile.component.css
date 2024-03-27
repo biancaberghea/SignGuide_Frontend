@@ -1,0 +1,311 @@
+body.all {
+  background-image: linear-gradient(to bottom right,rgba(30,39,97) 50%, white 50%);
+  height: 100vh;
+  width: 100vw;
+}
+
+div.all {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.header {
+  height: 20%;
+  width: 100%;
+  background: white;
+  border-bottom: medium solid rgba(30,39,97);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  background-color: white;
+  border-bottom: medium solid rgba(30,39,97);
+}
+
+
+.greeting {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
+
+.text {
+  font-family: 'Berlin Sans FB';
+  font-size: 35px;
+  color: rgba(30,39,97);
+  font-weight: 300;
+}
+
+.man {
+  font-size: 60px;
+  color: rgba(30,39,97);
+  font-weight: 300;
+}
+
+.homeDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  border: unset;
+  background: rgba(0,0,0,0);
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.homeText {
+  font-family: 'Berlin Sans FB';
+  font-size: 20px;
+  color: rgba(30,39,97);
+}
+
+.home {
+  color: rgba(30,39,97);
+  font-size: 40px;
+}
+
+
+.content {
+  flex: 1;
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+.progress {
+  flex: 1;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: flex-start;
+}
+
+.progressHeader {
+  height: 180px;
+  width: 375px;
+  background: white;
+  padding: 20px;
+  clip-path: polygon(50% 100%, 100% 65%, 100% 0, 0 0, 0 65%);
+  margin-left: 70px;
+  margin-top: -190px;
+  border: unset;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.progressText {
+  font-family: 'Berlin Sans FB';
+  font-size: 25px;
+  color: #7d7fe8;
+}
+
+.cardLearn, .cardQuiz {
+  height: 220px;
+  width: 190px;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  border: unset;
+  border-radius: 15px;
+}
+
+
+.cards {
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  margin-left: 58px;
+  margin-top: -50px;
+}
+
+.cardLearn {
+  clip-path: polygon(0 100%, 100% 100%, 100% 0, 50% 15%, 0 30%);
+  margin-left: 7px;
+}
+
+.cardQuiz {
+  clip-path: polygon(0 100%, 100% 100%, 100% 30%, 50% 15%, 0 0);
+  margin-right: 7px;
+}
+
+.learn_progress, .quiz_progress {
+  font-family: 'Berlin Sans FB';
+}
+
+
+.notesDivCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  height: fit-content;
+  width: fit-content;
+}
+
+.notesDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  height: fit-content;
+  width: fit-content;
+  margin-top: 20px;
+  margin-right: 60px;
+}
+
+.notes {
+  clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+  height: 480px;
+  width: 400px;
+  background-image: url('..\..\..\..\assets\notebook.jpg');
+  margin-top: -10px;
+  border: unset;
+  border-radius: 15px;
+  margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.note {
+  margin-top: 15px;
+  height: 50px;
+  width: 300px;
+  background: white;
+  color: rgba(30,39,97);
+  font-family: 'Berlin Sans FB';
+  font-size: 25px;
+  font-weight: 200;
+  border: unset;
+  border-radius: 15px;
+}
+
+.expanded {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+}
+
+.btnHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.back {
+  color: rgba(30,39,97);
+  font-size: 25px;
+  margin-left: auto;
+}
+
+.noteContent p {
+  font-family: 'Berlin Sans FB';
+  font-size: 20px;
+  color: rgba(30,39,97);
+}
+
+.notesText {
+  font-family: 'Berlin Sans FB';
+  font-size: 25px;
+  font-weight: 300;
+  color: rgba(30,39,97);
+  margin-left: 60px;
+}
+
+.move {
+  margin-top: -250px;
+  margin-left: 30px;
+}
+
+.moveBtn {
+  background: rgba(0,0,0,0);
+  border: unset;
+}
+
+.prev, .next {
+  color: rgba(30,39,97);
+  font-size: 35px;
+}
+
+.next {
+  transform: scaleX(-1);
+  margin-left: 400px;
+}
+
+.editNoteBtn {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100px;
+}
+
+.editBtn {
+  color: rgba(30,39,97);
+  background: rgba(0,0,0,0);
+  border: unset;
+}
+
+.editIcon {
+  font-size: 30px;
+}
+
+.editNote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin-top: -350px;
+}
+
+.edit {
+  border: thin solid rgba(30,39,97);
+  border-radius: 15px;
+  height: 60px;
+  width: 200px;
+  margin: 15px;
+}
+
+.saveEdit {
+  height: 40px;
+  width: 200px;
+  background: #7d7fe8;
+  border: unset;
+  border-radius: 15px;
+  color: white;
+  font-family: 'Berlin Sans FB';
+  font-size: 20px;
+  margin-top: 30px;
+}

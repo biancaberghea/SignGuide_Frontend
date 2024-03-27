@@ -1,0 +1,29 @@
+<body class="all">
+  <div class="card">
+    <div class="all">
+      <img src="../../../../assets/bckg.png" class="bckg-img" />
+    </div>
+    <div class="all2">
+      <div class="loginForm">
+        <div class="header">
+          <button class="login" routerLink="/auth/login" [class.active]="activeForm === 'login'">Log In</button>
+          <button class="signup" routerLink="/auth/signup" [class.active]="activeForm === 'signup'">Sign Up</button>
+        </div>
+        <form (ngSubmit)="login()" [formGroup]="loginForm">
+          <div class="main">
+            <input class="input1" type="text" placeholder="Enter Email" name="email" formControlName="email" required>
+            <br />
+            <div class="password-container">
+              <input class="input2" type="{{ showPsswd ? 'text' : 'password' }}" placeholder="Enter Password" name="password" formControlName="password" required>
+              <img src="../../assets/eye_white.png" class="button-image" (click)="changePsswdVisibility()" />
+            </div>
+            <br />
+            <button type="submit" class="loginBtn">Log In</button>
+            <br />
+            <p class="forgotpsswd"> <a href="#">Forgot Password?</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>

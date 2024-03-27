@@ -1,0 +1,185 @@
+body.all {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(to bottom right,rgba(30,39,97) 50%, white 50%);
+}
+
+.header {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  background-color: white;
+  border-bottom: medium solid rgba(30,39,97);
+}
+
+.text {
+  font-family: 'Berlin Sans FB';
+  color: rgba(30,39,97);
+  font-size: 35px;
+  font-weight: 300;
+  align-self: center;
+  justify-self: center;
+  margin-left: auto;
+}
+
+.homeDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  border: unset;
+  background: rgba(0,0,0,0);
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.homeText {
+  font-family: 'Berlin Sans FB';
+  font-size: 20px;
+  color: rgba(30,39,97);
+}
+
+.home {
+  color: rgba(30,39,97);
+  font-size: 40px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.word {
+  font-family: 'Berlin Sans FB';
+  color: white;
+  font-size: 30px;
+  font-weight: 200;
+}
+
+.videoContainer {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  margin-top: 100px;
+}
+
+.moveL, .moveR {
+  border: unset;
+  background: rgba(0,0,0,0);
+  font-size: 50px;
+}
+
+.moveL {
+  color: white;
+}
+
+.moveR {
+  color: rgba(30,39,97);
+}
+
+.checkbox {
+  height: fit-content;
+  width: fit-content;
+  padding: 20px;
+  margin: 20px;
+  font-family: 'Berlin Sans FB';
+  font-size: 18px;
+  color: rgba(30,39,97);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.note {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: 200px;
+  margin-top: -120px;
+  height: fit-content;
+  width: fit-content;
+}
+
+.noteContent {
+  background-image: url('../../../../assets/note.png');
+  background-position: center center;
+  background-size: cover;
+  height: 250px;
+  width: 250px;
+}
+
+.noteInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.titleInput {
+  height: 40px;
+  width: 90%;
+  border: thin solid rgba(30,39,97);
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+  .titleInput::placeholder, .contentInput::placeholder {
+    font-family: 'Berlin Sans FB';
+    font-size: 18px;
+    color: rgba(30,39,97);
+    text-align: center;
+  }
+
+.contentInput {
+  height: 70px;
+  width: 90%;
+  border: thin solid rgba(30,39,97);
+  border-radius: 15px;
+}
+
+.note p {
+  font-family: 'Berlin Sans FB';
+  font-size: 18px;
+  color: white;
+  margin-left: 30px;
+  margin-top: 15px;
+}
+
+.addBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  padding-right: 20px;
+  background: rgba(30,39,97);
+  border: unset;
+  border-radius: 15px;
+  height: 40px;
+  width: fit-content;
+  margin-top: -30px;
+}
+
+.add {
+  color: white;
+  font-size: 20px;
+  margin-left: 5px;
+  margin-top: -5px;
+}

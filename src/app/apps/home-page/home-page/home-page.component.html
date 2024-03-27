@@ -1,0 +1,85 @@
+<body class="all">
+  <div class="all">
+    <div class="content">
+      <div class="header">
+        <div class="text">
+          <div class="textBlue">Sign</div><div class="textWhite">Guide</div>
+        </div>
+        <div class="search-div">
+          <input type="text" placeholder="Looking for something specific?" class="search-bar" [(ngModel)]="searchText">
+          <button class="searchBtn" [disabled]="searchText==''" (click)="changeContent('search')"><span class="material-icons search">search</span></button>
+          <button class="searchBtn" [hidden]="component==null" (click)="changeContent('home')"><span class="material-icons search">close</span></button>
+        </div>
+
+        <div class="buttons">
+          <button style="color: rgba(30,39,97);
+                             text-shadow: 3px 3px 5px rgba(255, 255, 255, 1) "
+                  class="learnBtn" mat-button [matMenuTriggerFor]="learnBtn">
+            <span class="material-icons"> book </span>
+            Learn ASL
+          </button>
+          <mat-menu #learnBtn="matMenu">
+            <ng-template ngFor let-big_category [ngForOf]="cat_names | keyvalue">
+              <button mat-menu-item class="btn" [matMenuTriggerFor]="subMenu">
+                <p class="textBtn">{{big_category.key}}</p>
+              </button>
+              <mat-menu #subMenu="matMenu">
+                <button mat-menu-item class="subBtn" *ngFor="let sub_category of big_category.value" (click)="navToCat(sub_category)">
+                  <p class="textSubBtn">{{sub_category}}</p>
+                </button>
+              </mat-menu>
+            </ng-template>
+          </mat-menu>
+
+          <button style="color: rgba(30,39,97);
+                             text-shadow: 3px 3px 5px rgba(255, 255, 255, 1)"
+                  class="quizBtn" mat-button [matMenuTriggerFor]="quizBtn">
+            <span class="material-icons"> question_mark </span>
+            Take quiz
+          </button>
+          <mat-menu #quizBtn="matMenu">
+            <ng-template ngFor let-big_category [ngForOf]="cat_names | keyvalue">
+              <button mat-menu-item class="btn" [matMenuTriggerFor]="subMenu">
+                <p class="textBtn">{{big_category.key}}</p>
+              </button>
+              <mat-menu #subMenu="matMenu">
+                <button mat-menu-item class="subBtn" *ngFor="let sub_category of big_category.value" (click)="navToCat(sub_category)">
+                  <p class="textSubBtn">{{sub_category}}</p>
+                </button>
+              </mat-menu>
+            </ng-template>
+          </mat-menu>
+
+          <button style="color: rgba(30,39,97);
+                             text-shadow: 3px 3px 5px rgba(255, 255, 255, 1)"
+                  class="profileBtn" mat-button [matMenuTriggerFor]="profileBtn">
+            <span class="material-icons"> person </span>
+            My Profile
+          </button>
+          <mat-menu #profileBtn="matMenu">
+            <button mat-menu-item class="btn" routerLink="/profile/profile"><p class="textBtn">Go To Profile</p></button>
+            <button mat-menu-item class="btn" (click)="logout()"><p class="textBtn">Log out</p></button>
+          </mat-menu>
+
+          <button *hasRoles="[Role.Administrator]" style="color: rgba(30,39,97);
+               text-shadow: 3px 3px 5px rgba(255, 255, 255, 1) "
+                  class="editBtn" routerLink="/admin/admin">
+            <span class="material-icons"> edit </span>
+            Edit Words
+          </button>
+        </div>
+
+      </div>
+      <ng-container *ngIf="component; else defaultContent">
+        <ng-template #contentContainer></ng-template>
+      </ng-container>
+
+      <ng-template #defaultContent>
+        <div class="defContent">
+
+          <div class="bckg"></div>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</body>

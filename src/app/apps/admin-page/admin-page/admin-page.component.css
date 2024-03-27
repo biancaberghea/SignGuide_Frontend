@@ -1,0 +1,177 @@
+body.all {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+
+div.all {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.header {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: white;
+  align-items: center;
+  border-bottom: medium solid rgba(30,39,97);
+}
+
+  .header p {
+    color: rgba(30,39,97);
+    font-family: 'Berlin Sans FB';
+    font-size: 35px;
+    height: fit-content;
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+
+.search-div {
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-right: auto;
+  margin-left: 10px;
+}
+
+.search-bar {
+  border: thin solid rgba(30,39,97);
+  border-radius: 15px;
+  height: 35px;
+  width: 250px;
+  background: rgba(255,255,255,0.0);
+}
+
+  .search-bar::placeholder {
+    color: rgba(30,39,97);
+    text-align: center;
+    font-family: 'Berlin Sans FB';
+    font-size: 17px;
+  }
+
+.searchBtn {
+  border: unset;
+  background: unset;
+  color: rgba(30,39,97);
+}
+
+.search {
+  font-size: 30px;
+}
+
+.table {
+  align-self: center;
+  justify-self: center;
+  border: medium solid rgba(30,39,97);
+  border-radius: 15px;
+}
+
+.mat-mdc-table .mat-mdc-header-cell {
+  background: rgba(30,39,97);
+}
+
+.mdc-data-table__header-cell {
+  box-sizing: border-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  outline: none;
+  text-align: center;
+  font-family: 'Berlin Sans FB';
+  font-size: 25px;
+  color: white;
+  font-weight: 100;
+}
+
+.mat-mdc-row:nth-child(2n) {
+  background-color: rgba(125,127,232, 0.2);
+}
+
+.mdc-data-table__cell {
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  font-family: 'Berlin Sans FB';
+  font-size: 20px;
+  color: rgba(30,39,97);
+  font-weight: 100;
+}
+
+.mat-header-cell:first-child {
+  border-top-left-radius: 5px;
+}
+
+.mat-header-cell:last-child {
+  border-top-right-radius: 5px;
+}
+
+
+.addBtn {
+  background: white;
+  border: thin solid rgba(30,39,97);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.addText, .addIcon {
+  color: rgba(30,39,97);
+  font-size: 20px;
+}
+
+.addText {
+  font-family: 'Berlin Sans FB';
+}
+
+.move {
+  margin-left: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.moveBtn {
+  background: rgba(0,0,0,0);
+  border: unset;
+}
+
+.prev, .next {
+  color: rgba(30,39,97);
+  font-size: 35px;
+}
+
+.next {
+  transform: scaleX(-1);
+  margin-left: 1400px;
+}
+
+.editBtn {
+  background: white;
+  color: rgba(30,39,97);
+  font-family: 'Berlin Sans FB';
+  font-size: 15px;
+  border: thin solid rgba(30,39,97);
+  border-radius: 30px;
+}

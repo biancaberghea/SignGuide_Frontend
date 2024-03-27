@@ -1,0 +1,13 @@
+<body class="all">
+  <div class="header">
+    <p class="text" *ngIf="url!=null">Search results for {{word}}</p>
+    <p class="text" *ngIf="url==null">Sorry, we don't have information for {{word}}</p>
+  </div>
+  <div class="content">
+    <div class="videoContainer">
+      <div class="video">
+        <iframe [src]="url" width="500" height="200" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+</body>

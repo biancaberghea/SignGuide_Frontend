@@ -1,0 +1,157 @@
+body.all {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to bottom right,rgba(30,39,97) 50%, white 50%);
+}
+
+.card {
+  height: 80%;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.7);
+}
+
+div.all {
+  height: 100%;
+  background-color: rgba(30,39,97);
+}
+
+.bckg-img {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.all2 {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  align-content: center;
+  align-items: center
+}
+
+.loginForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: fit-content;
+  background: white;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15%;
+  margin-top: 2%;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+  text-align: center;
+  width: 100%;
+  height: 50%;
+}
+
+button.login,
+.main button {
+  background-color: rgba(30,39,97);
+  color: white;
+}
+
+button.signup {
+  color: rgba(30,39,97);
+  background-color: white;
+}
+
+.header button,
+.main button {
+  text-align: center;
+  border-radius: 15px;
+  font-size: 20px;
+  font-family: 'Berlin Sans FB';
+  margin: 15px;
+  padding: 20px;
+  margin-top: 50px;
+  border: thin solid rgba(30,39,97);
+  font-weight: 300;
+  height: 60px;
+  width: 150px;
+}
+
+.main button {
+  margin-top: 15px;
+}
+
+.main input {
+  text-align: center;
+  padding: 30px;
+  width: 200px;
+  background: rgba(255, 255, 255, 0.0);
+}
+
+  .main input::placeholder {
+    color: rgba(30,39,97, 0.8);
+    font-size: 20px;
+    font-family: 'Berlin Sans FB';
+    font-weight: 100;
+  }
+
+.input1 {
+  border-top: thin solid rgba(30,39,97);
+  border-right: thin solid rgba(30,39,97);
+  border-bottom: thin solid rgba(30,39,97);
+  border-radius: 15px 15px 15px 0px;
+  border-left: unset;
+}
+
+.input2 {
+  border-top: unset;
+  border-left: thin solid rgba(30,39,97);
+  border-bottom: thin solid rgba(30,39,97);
+  border-radius: 0px 15px 0px 15px;
+  border-right: unset;
+}
+
+.forgotpsswd {
+  text-align: center;
+  border-radius: 15px;
+  font-size: 15px;
+  margin: 10px;
+  padding: 10px;
+  font-family: 'Berlin Sans FB';
+}
+
+.password-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.button-image {
+  max-width: 40px;
+  max-height: 40px;
+  right: -1%;
+  top: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}

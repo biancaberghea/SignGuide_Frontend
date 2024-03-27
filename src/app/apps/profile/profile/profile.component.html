@@ -1,0 +1,88 @@
+<body class="all">
+  <div class="all">
+    <div class="header">
+      <div class="greeting">
+        <span class="material-icons man">person</span>
+        <p class="text">Hello, {{username}}!</p>
+      </div>
+      <button class="homeDiv" routerLink="/home/home">
+        <p class="homeText">Go back</p>
+        <span class="material-icons home">home</span>
+      </button>
+    </div>
+    <div class="content">
+      <div class="progress">
+        <div class="progressHeader"><p class="progressText">Keep track of your progress</p></div>
+        <div class="cards">
+          <div class="cardQuiz">
+            <circle-progress class="learn_progress"
+                             [percent]=quizPercent
+                             [toFixed]="2"
+                             [animation]="true"
+                             [startFromZero]="true"
+                             [titleFontSize]="'22'"
+                             [titleFontWeight]="'400'"
+                             [unitsFontSize]="'26'"
+                             [unitsFontWeight]="'400'"
+                             [subtitle]="'Quiz'"
+                             [subtitleFontWeight]="'300'"
+                             [subtitleFontSize]="'20'" />
+          </div>
+          <div class="cardLearn">
+            <circle-progress class="learn_progress"
+                             [percent]=learnPercent
+                             [toFixed]="2"
+                             [animation]="true"
+                             [startFromZero]="true"
+                             [titleFontSize]="'22'"
+                             [titleFontWeight]="'400'"
+                             [unitsFontSize]="'26'"
+                             [unitsFontWeight]="'400'"
+                             [subtitle]="'Learning'"
+                             [subtitleFontWeight]="'300'"
+                             [subtitleFontSize]="'20'" />
+          </div>
+        </div>
+      </div>
+      <div class="notesDivCol">
+        <div class="notesDiv">
+          <p class="notesText">Revise your Notes</p>
+          <div class="notes">
+
+            <button class="note"
+                    *ngFor="let note of getNotes(currentIdx)"
+                    (click)="selectedNote = (selectedNote === note) ? null : note"
+                    [class.expanded]="selectedNote === note"
+                    [hidden]="selectedNote !== null && selectedNote !== note">
+              <div class="btnHeader" [hidden]="isEditing">
+                <span class="title">{{note}}</span>
+                <span class="material-icons back" *ngIf="selectedNote">arrow_back</span>
+              </div>
+              <span class="noteContent" *ngIf="selectedNote" [hidden]="isEditing"> <p>{{userNotes[selectedNote]}}</p></span>
+            </button>
+            <div class="editNote" *ngIf="isEditing">
+              <input class="edit" type="text" [(ngModel)]="editTitle" />
+              <input class="edit " type="text" [(ngModel)]="editContent" />
+              <button class="saveEdit" (click)="saveEdit()">Save Changes</button>
+            </div>
+            <div class="editNoteBtn" *ngIf="selectedNote && !isEditing">
+              <button class="editBtn" (click)="editNote()"><span class="material-icons editIcon">edit</span></button>
+              <button class="editBtn" (click)="deleteNote()"><span class="material-icons editIcon">delete</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="move">
+          <button class="moveBtn" [disabled]="isFirstPage()" (click)="prevPage()">
+            <span class="material-icons prev"
+                  [ngStyle]="{ 'color': isFirstPage() ? 'white' : 'rgba(30,39,97)' }">reply</span>
+          </button>
+          <button class="moveBtn" [disabled]="isLastPage()" (click)="nextPage()">
+            <span class="material-icons next"
+                  [ngStyle]="{ 'color': isLastPage() ? 'white' : 'rgba(30,39,97)' }">reply</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+

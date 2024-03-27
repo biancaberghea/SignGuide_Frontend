@@ -1,0 +1,65 @@
+body.all {
+  flex: 1;
+  width: 100%;
+}
+
+.header {
+  height: 15%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  background-color: white;
+  border-bottom: medium solid rgba(30,39,97);
+}
+
+.text {
+  font-family: 'Berlin Sans FB';
+  color: rgba(30,39,97);
+  font-size: 35px;
+  font-weight: 300;
+  align-self: center;
+  justify-self: center;
+  margin-bottom: 10px;
+}
+
+.homeDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  border: unset;
+  background: rgba(0,0,0,0);
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.homeText {
+  font-family: 'Berlin Sans FB';
+  font-size: 20px;
+  color: rgba(30,39,97);
+}
+
+.home {
+  color: rgba(30,39,97);
+  font-size: 40px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.videoContainer {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  margin-top: 100px;
+}

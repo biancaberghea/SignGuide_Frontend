@@ -1,0 +1,105 @@
+body.all {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  height: 40px;
+  width: 100%;
+  border-bottom: medium solid rgba(30,39, 97);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  .header p {
+    color: rgba(30,39,97);
+    font-family: 'Berlin Sans FB';
+    font-size: 30px;
+    height: fit-content;
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+
+.table {
+  align-self: center;
+  justify-self: center;
+  border: medium solid rgba(30,39,97);
+  border-radius: 15px;
+}
+
+.mat-mdc-table .mat-mdc-header-cell {
+  background: rgba(30,39,97);
+}
+
+.mdc-data-table__header-cell {
+  box-sizing: border-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  outline: none;
+  text-align: center;
+  font-family: 'Berlin Sans FB';
+  font-size: 25px;
+  color: white;
+  font-weight: 100;
+}
+
+.mat-mdc-row:nth-child(2n) {
+  background-color: rgba(125,127,232, 0.2);
+}
+
+.mdc-data-table__cell {
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  font-family: 'Berlin Sans FB';
+  font-size: 20px;
+  color: rgba(30,39,97);
+  font-weight: 100;
+}
+
+.mat-header-cell:first-child {
+  border-top-left-radius: 5px;
+}
+
+.mat-header-cell:last-child {
+  border-top-right-radius: 5px;
+}
+
+.move {
+  height: fit-content;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: -70px;
+}
+
+.moveBtn {
+  background: rgba(0,0,0,0);
+  border: unset;
+  height: fit-content;
+  width: fit-content;
+}
+
+.prev, .next {
+  color: rgba(30,39,97);
+  font-size: 35px;
+}
+
+.next {
+  transform: scaleX(-1);
+  margin-left: 1400px;
+}
+
+.editBtn {
+  background: white;
+  color: rgba(30,39,97);
+  font-family: 'Berlin Sans FB';
+  font-size: 15px;
+  border: thin solid rgba(30,39,97);
+  border-radius: 30px;
+}
