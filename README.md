@@ -48,5 +48,3 @@ The following is the top-level directory structure:
     * Utils:contains the roles directive, interceptor and guard
 
 
-![alt text](https://github.com/Piciorus/Photos/blob/main/diagram1.png)<br/><br/><br/>
-
