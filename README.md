@@ -1,27 +1,52 @@
-# Frontend
+# ASL E-Learning App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.7.
+## 🚀 Description
 
-## Development server
+This is an application that facilitates the learning process of the American Sign Language. The learning content is first divided in categories corresponding to differents parts of speech and then in corresponding categories for their meaning (eg: animals, colors, feelings). The learning process consists in watching videos where different people perform a sign for a given word. The app also offers a quiz functionality, where users have to perform a sign for a given word, which will be recorded by the device camera and evaluated as correct or incorrect with the help of an AI.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🖥️ Technologies
+* `Angular`
+* `Typescript`
+* `HTML & CSS`
+* `MySQL`
+* `Python`
+* `Flask`
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    
+## 🗝️ API architecture
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+The following is the top-level directory structure:
+* App - Initialize flask app
+* Db - Initialize the database connection with SQLAlchemy
+* Model - Defines DTO and the tables to access with SQLAlchemy
+* Repository - Communication with the database
+* Service - Business logic layer
+* Controller - Presentation layer containing the endpopints
+* Config - Contains the configuration files for the entire application
+	
+⚙️ Database layer: The database layer stores data in a structured format that can be easily accessed and queried by the application layer.The application layer sends requests for data to the database layer through the data access layer. 
 
-## Running unit tests
+⚙️ Data layer: The data access layer is responsible for interacting with the data storage system, such as a database or file system.This will contain all entities, enums, exceptions, interfaces, types and logic specific to this layer.It provides an interface for the application layer to read and write data to the storage system.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+⚙️ Business logic layer: This layer is responsible for implementing the business logic of the software system. It receives data from the presentation layer, processes it, and sends it to the data access layer for storage.This contains the interfaces of the services, that are used in the API layer, the services implementation, all the helpers classes, custom exceptions, guard clauses, domain events, handlers, basically all the business of the application.
 
-## Running end-to-end tests
+⚙️ Presentation layer: The presentation layer is the topmost layer of a software system, responsible for rendering user interfaces and interacting with users. It communicates with the business logic layer to receive and send data.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+⚙️ Client: The client refers to the user interface or the front-end of the application. It is responsible for presenting data and information to the user and for accepting user inputs.
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## 🗝️ WEB architecture
+The following is the top-level directory structure:
+
+* Assets - global static assets like photos, svgs
+* App - contains following folders:
+    * Apps:contains all the components from the application,organized in modules, which enables lazy loading.
+    * Auth:contains the login and register component
+    * Utils:contains the roles directive, interceptor and guard
+
+
+![alt text](https://github.com/Piciorus/Photos/blob/main/diagram1.png)<br/><br/><br/>
+
